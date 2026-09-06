@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12141A">
+<meta name="description" content="Hostel Cleanliness & Dining Etiquette programme for KL University, Vaddeswaram. Guidelines, waste segregation, monitoring, progressive enforcement and reporting.">
+<title>Hostel Cleanliness &amp; Dining Etiquette — KL University, Vaddeswaram</title>
+<!-- ponytail: one file, no JS, no webfonts, no dependencies -->
+<style>
+:root{
+  --bg:#12141A; --panel:#181B22; --panel2:#1E222B; --line:#282D38;
+  --text:#E9EBEF; --muted:#9AA1AE; --dim:#6E7684;
+  --accent:#5FB07C; --blue:#6FA8DC; --amber:#D9A441; --red:#D07B72;
+  --sans:ui-sans-serif,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --serif:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+.col{max-width:720px}
+section{padding:84px 0;border-top:1px solid var(--line)}
+h1,h2,h3{margin:0 0 .5em;font-weight:600;line-height:1.15;letter-spacing:-.02em}
+h1{font-size:clamp(2.2rem,6vw,4rem)}
+h2{font-size:clamp(1.6rem,3.6vw,2.5rem)}
+h3{font-size:1.02rem;letter-spacing:0;line-height:1.35}
+em{font-family:var(--serif);font-style:italic;letter-spacing:-.01em}
+p{margin:0 0 1.1em;max-width:70ch}
+.muted{color:var(--muted)}
+.lede{font-size:1.15rem;color:var(--muted)}
+a{color:var(--text)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+ul{margin:0 0 1em;padding-left:1.1em}
+li{margin:.3em 0}
+strong{font-weight:600}
+
+.eyebrow{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:0 0 18px}
+.eyebrow b{color:var(--accent);font-weight:600;margin-right:10px;font-variant-numeric:tabular-nums}
+
+.nav{position:sticky;top:0;z-index:20;background:rgba(18,20,26,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:22px;height:62px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.nav .wrap::-webkit-scrollbar{display:none}
+.brand{font-size:.86rem;font-weight:600;letter-spacing:.01em}
+.brand span{display:block;font-size:.72rem;font-weight:400;color:var(--dim);letter-spacing:.06em}
+.nav a{color:var(--muted);text-decoration:none;font-size:.85rem}
+.nav a:hover{color:var(--text)}
+
+.hero{border-top:0;padding:96px 0 84px}
+.hero .status{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:26px}
+.hero .status i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:9px;vertical-align:middle}
+.hero p.big{font-size:1.2rem;color:var(--muted);max-width:60ch}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-block;padding:13px 24px;text-decoration:none;font-size:.92rem;font-weight:500;border:1px solid var(--line);border-radius:2px;color:var(--text)}
+.btn-solid{background:var(--text);color:#12141A;border-color:var(--text)}
+.btn:hover{border-color:var(--accent)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:64px}
+.facts div{background:var(--bg);padding:22px 20px 24px}
+.facts dt{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
+.facts dd{margin:0;font-size:.95rem;color:var(--text)}
+
+.grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.cell{background:var(--panel);padding:26px 24px}
+.cell .n{display:block;font-size:.76rem;letter-spacing:.1em;color:var(--dim);margin-bottom:12px;font-variant-numeric:tabular-nums}
+.cell p{margin:0;color:var(--muted);font-size:.95rem}
+.cell ul{margin:0;color:var(--muted);font-size:.95rem}
+.spaced{margin-top:44px}
+
+.pull{margin:52px 0 0;padding:34px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  font-family:var(--serif);font-size:clamp(1.25rem,2.6vw,1.7rem);line-height:1.45;max-width:26ch}
+.pull.wide{max-width:34ch}
+.note{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:.86rem;color:var(--dim);max-width:78ch}
+.note p{margin:0;max-width:none}
+
+.list{list-style:none;padding:0;margin:36px 0 0;border-top:1px solid var(--line);counter-reset:c}
+.list li{counter-increment:c;display:grid;grid-template-columns:56px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);margin:0}
+.list li::before{content:counter(c,decimal-leading-zero);color:var(--dim);font-size:.85rem;font-variant-numeric:tabular-nums}
+.list li.no::before{content:"—";color:var(--red)}
+.list li.no{color:var(--muted)}
+
+.mnemo{margin:52px 0 0;padding:40px 20px;text-align:center;border:1px solid var(--line);background:var(--panel);
+  font-size:clamp(1.1rem,3.4vw,1.7rem);font-weight:600;letter-spacing:.22em}
+.mnemo i{font-style:normal;color:var(--dim);font-weight:400;letter-spacing:0;padding:0 14px}
+
+.tag{display:inline-block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--line);color:var(--muted);margin:0 6px 6px 0}
+.dest{margin:18px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:.88rem;color:var(--accent)}
+.dest.b{color:var(--blue)}
+
+.steps{list-style:none;padding:0;margin:44px 0 0;border-top:1px solid var(--line)}
+.steps li{display:grid;grid-template-columns:120px 1fr;gap:28px;padding:26px 0;border-bottom:1px solid var(--line)}
+.steps .st{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.steps li:nth-child(1) .st{color:var(--accent)}
+.steps li:nth-child(4) .st{color:var(--amber)}
+.steps li:nth-child(5) .st{color:var(--red)}
+.steps h3{margin:0 0 .3em;font-size:1.15rem}
+.steps p{margin:0;color:var(--muted);font-size:.95rem}
+.ladder{font-size:.85rem;letter-spacing:.06em;color:var(--dim);margin:0}
+
+.tw{overflow-x:auto;margin-top:36px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.93rem}
+th,td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line)}
+thead th{background:var(--panel2);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:500}
+tbody td{color:var(--muted)}
+tbody td:first-child{color:var(--text)}
+tbody tr:last-child td{border-bottom:0}
+caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--dim);padding:0 0 12px}
+
+.dd ul{list-style:none;padding:0;margin:0}
+.dd li{position:relative;padding:9px 0 9px 26px;border-bottom:1px solid var(--line);color:var(--muted);font-size:.95rem}
+.dd li:last-child{border-bottom:0}
+.dont li::before{content:"×";position:absolute;left:4px;color:var(--red)}
+.do li::before{content:"✓";position:absolute;left:0;color:var(--accent)}
+
+.chain{font-size:.95rem;color:var(--dim);margin:0 0 26px;letter-spacing:.02em}
+.chain b{color:var(--text);font-weight:500}
+
+.final{text-align:left}
+.final h2{font-size:clamp(1.8rem,5vw,3rem)}
+
+footer{border-top:1px solid var(--line);padding:70px 0 50px;font-size:.9rem;color:var(--muted)}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+footer h3{color:var(--dim);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin:.45em 0}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--text)}
+.ph{color:var(--dim)}
+.fbar{margin-top:50px;padding-top:22px;border-top:1px solid var(--line);font-size:.82rem;color:var(--dim)}
+.fbar p{max-width:none}
+
+@media (max-width:820px){
+  section{padding:60px 0}
+  .hero{padding:64px 0 56px}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .g2,.g3,.fgrid{grid-template-columns:1fr}
+  .steps li{grid-template-columns:1fr;gap:6px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <div class="brand">KL University <span>Hostel Administration</span></div>
+    <a href="#why">Why</a>
+    <a href="#guidelines">Guidelines</a>
+    <a href="#bins">Waste</a>
+    <a href="#common">Common areas</a>
+    <a href="#monitoring">Monitoring</a>
+    <a href="#enforcement">Enforcement</a>
+    <a href="#fines">Penalties</a>
+    <a href="#report">Report</a>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <p class="status"><i></i>A hostel initiative · Vaddeswaram campus</p>
+  <h1>Respect the space.<br>Respect the <em>next person.</em></h1>
+  <p class="big">A clean hostel is everyone’s responsibility. Students are expected to maintain basic dining etiquette and dispose of food and other waste responsibly.</p>
+  <div class="btns">
+    <a class="btn btn-solid" href="#guidelines">View guidelines</a>
+    <a class="btn" href="#enforcement">Understand the penalty system</a>
+  </div>
+  <dl class="facts">
+    <div><dt>Programme</dt><dd>Hostel Cleanliness &amp; Dining Etiquette</dd></div>
+    <div><dt>Applies to</dt><dd>All hostel residents, dining halls and common areas</dd></div>
+    <div><dt>Administered by</dt><dd>Hostel Administration and Hostel Wardens</dd></div>
+    <div><dt>Approach</dt><dd>Educate, remind, warn — penalties only on repetition</dd></div>
+  </dl>
+</header>
+
+<section id="why">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow"><b>01</b>Why this matters</span>
+      <h2>What gets left behind does not <em>stay</em> behind.</h2>
+      <p class="lede">Food waste left on tables, floors and common areas affects everyone who uses the hostel after you.</p>
+    </div>
+    <div class="grid g3 spaced">
+      <div class="cell"><span class="n">01</span><h3>Hygiene problems</h3><p>Exposed food waste contaminates the surfaces students eat on every day.</p></div>
+      <div class="cell"><span class="n">02</span><h3>Unpleasant smell</h3><p>Leftovers turn stale quickly, especially in enclosed lifts and corridors.</p></div>
+      <div class="cell"><span class="n">03</span><h3>Insects and pests</h3><p>Bones, shells and scraps attract flies, cockroaches and rodents.</p></div>
+      <div class="cell"><span class="n">04</span><h3>Poor dining conditions</h3><p>The next student has to clear your table before they can sit down.</p></div>
+      <div class="cell"><span class="n">05</span><h3>Extra work for housekeeping</h3><p>Avoidable mess adds hours to an already full cleaning schedule.</p></div>
+      <div class="cell"><span class="n">06</span><h3>An unpleasant place to live</h3><p>Shared spaces set the standard of the entire hostel.</p></div>
+    </div>
+    <blockquote class="pull wide">We are not asking students to clean the hostel. We are asking students not to make it dirty.</blockquote>
+  </div>
+</section>
+
+<section id="guidelines">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow"><b>02</b>Dining etiquette</span>
+      <h2>Before you leave <em>the table.</em></h2>
+      <p class="lede">Six seconds of checking is all this takes.</p>
+      <ol class="list">
+        <li>Check the table before leaving.</li>
+        <li>Collect chicken bones and other food waste.</li>
+        <li>Dispose of eggshells, corn cobs and food leftovers properly.</li>
+        <li>Put tissues, wrappers and disposable items in the appropriate bins.</li>
+        <li>Leave the table reasonably clean for the next student.</li>
+        <li class="no">Do not leave food waste on chairs, tables or surrounding areas.</li>
+      </ol>
+    </div>
+    <p class="mnemo">LOOK<i>→</i>PICK<i>→</i>BIN</p>
+  </div>
+</section>
+
+<section id="bins">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow"><b>03</b>Segregation</span>
+      <h2>What goes <em>where.</em></h2>
+      <p class="lede">Two bins, two rules. Both are provided in every dining area.</p>
+    </div>
+    <div class="grid g2 spaced">
+      <div class="cell">
+        <span class="n">Green bin</span>
+        <h3>Food waste</h3>
+        <ul><li>Chicken bones</li><li>Eggshells</li><li>Corn cobs</li><li>Food leftovers</li><li>Vegetable and fruit waste</li></ul>
+        <p class="dest">Dispose in designated food-waste bins</p>
+      </div>
+      <div class="cell">
+        <span class="n">Blue bin</span>
+        <h3>Dry waste</h3>
+        <ul><li>Wrappers</li><li>Tissues</li><li>Disposable cups</li><li>Packaging</li></ul>
+        <p class="dest b">Dispose in designated dry-waste bins</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="common">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow"><b>04</b>Common areas</span>
+      <h2>Shared space is <em>everyone’s</em> space.</h2>
+      <p>
+        <span class="tag">Dining hall</span><span class="tag">Corridors</span><span class="tag">Lifts</span><span class="tag">Staircases</span><span class="tag">Common areas</span>
+      </p>
+      <p><strong>Food waste must not be thrown or left in common areas.</strong></p>
+    </div>
+    <div class="grid g2 spaced">
+      <div class="cell"><h3>What counts as a violation</h3>
+        <ul>
+          <li>Leaving food or snacks on lift floors</li>
+          <li>Throwing corn cobs outside</li>
+          <li>Leaving chicken bones on tables</li>
+          <li>Leaving eggshells on dining tables</li>
+          <li>Throwing wrappers or tissues on the floor</li>
+          <li>Deliberately littering common areas</li>
+        </ul>
+      </div>
+      <div class="cell"><h3>Why these areas in particular</h3>
+        <p>Lifts, staircases and corridors are cleaned on a fixed schedule, not continuously. Anything left there stays there — in front of every student, visitor and parent who passes through.</p>
+      </div>
+    </div>
+    <blockquote class="pull">Common spaces are shared spaces. Keep them clean for everyone.</blockquote>
+  </div>
+</section>
+
+<section id="monitoring">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow"><b>05</b>Monitoring &amp; accountability</span>
+      <h2>Reviewed when necessary. Handled <em>privately.</em></h2>
+      <p>Hostel common areas may be monitored through CCTV where surveillance systems are installed. CCTV footage may be reviewed by authorised Hostel Administration and Wardens when investigating cleanliness or hostel-rule violations.</p>
+    </div>
+    <div class="grid g2 spaced">
+      <div class="cell"><h3>Accessed for a reason</h3><p>Footage is reviewed by authorised staff, for a specific reported or observed violation — not as routine surveillance of individuals.</p></div>
+      <div class="cell"><h3>Never made public</h3><p>Identified violations are handled privately and in accordance with hostel rules and university procedures. Footage is not displayed, circulated or shared publicly.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="enforcement">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow"><b>06</b>Progressive enforcement</span>
+      <h2>The purpose is correction, <em>not punishment.</em></h2>
+      <p class="lede">Almost every case ends at the first two stages.</p>
+      <p class="ladder">Education → Reminder → Warning → Fine → Disciplinary action</p>
+    </div>
+    <ol class="steps">
+      <li><span class="st">Step 01</span><div><h3>Educate</h3><p>Posters, announcements, orientation sessions and dining-area reminders.</p></div></li>
+      <li><span class="st">Step 02</span><div><h3>Remind</h3><p>A private verbal or written reminder for a first observed violation.</p></div></li>
+      <li><span class="st">Step 03</span><div><h3>Warning</h3><p>Repeated or confirmed violations may receive an official warning.</p></div></li>
+      <li><span class="st">Step 04</span><div><h3>Penalty</h3><p>Repeated violations may result in a monetary fine as per hostel regulations. Applicable fines will be imposed and recorded through the University ERP system.</p></div></li>
+      <li><span class="st">Step 05</span><div><h3>Disciplinary action</h3><p>Persistent or serious violations may be referred for further disciplinary action according to university and hostel regulations.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="fines">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow"><b>07</b>Penalty structure</span>
+      <h2>Indicative, and <em>escalating.</em></h2>
+      <p class="lede">A first instance is a warning in every category below.</p>
+    </div>
+    <div class="tw">
+      <table>
+        <caption>Cleanliness violation — indicative penalty structure</caption>
+        <thead><tr><th scope="col">Violation</th><th scope="col">First instance</th><th scope="col">Second instance</th><th scope="col">Repeated violation</th></tr></thead>
+        <tbody>
+          <tr><td>Food waste left on dining table</td><td>Warning</td><td>₹500 fine</td><td>₹1,000 fine</td></tr>
+          <tr><td>Food waste in lift or common area</td><td>Warning</td><td>₹500–₹1,000 fine</td><td>₹2,000 fine</td></tr>
+          <tr><td>Deliberate littering</td><td>Warning</td><td>₹500 fine</td><td>₹1,000 fine</td></tr>
+          <tr><td>Repeated dining-area violations</td><td>Warning</td><td>Fine</td><td>Further disciplinary action</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note"><p><strong>Indicative only.</strong> Penalties are subject to the approved Hostel and University regulations. Fines, where applicable, will be imposed through the University ERP system. The amounts shown are not binding unless officially approved and notified by the competent authority.</p></div>
+  </div>
+</section>
+
+<section id="dodont">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow"><b>08</b>In practice</span>
+      <h2>The difference is <em>ten seconds.</em></h2>
+    </div>
+    <div class="grid g2 dd spaced">
+      <div class="cell dont">
+        <span class="n">Don’t</span>
+        <ul>
+          <li>Chicken bones on tables</li><li>Eggshells on tables</li><li>Corn cobs on the ground</li>
+          <li>Snack waste in lifts</li><li>Wrappers on floors</li><li>Food leftovers in common areas</li>
+        </ul>
+      </div>
+      <div class="cell do">
+        <span class="n">Do</span>
+        <ul>
+          <li>Use the designated bin</li><li>Leave the table clean</li><li>Keep lifts and corridors clean</li>
+          <li>Respect housekeeping staff</li><li>Respect fellow students</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="staff">
+  <div class="wrap col">
+    <span class="eyebrow"><b>09</b>Housekeeping</span>
+    <h2>Someone has to clean what you <em>leave behind.</em></h2>
+    <p>Housekeeping staff work continuously to maintain the hostel environment. Leaving food waste on tables, floors or common areas unnecessarily increases their workload.</p>
+    <blockquote class="pull wide">Cleanliness is not the responsibility of housekeeping alone. It is a shared responsibility.</blockquote>
+  </div>
+</section>
+
+<section id="responsibility">
+  <div class="wrap col">
+    <span class="eyebrow"><b>10</b>Student responsibility</span>
+    <h2>Hostel is your home <em>away from home.</em></h2>
+    <p>Many students are living independently for the first time. Hostel freedom also comes with responsibility for a space shared with hundreds of others.</p>
+    <p>Dining etiquette and cleanliness are basic habits that apply everywhere — at home, in restaurants, cafeterias and shared university spaces.</p>
+    <blockquote class="pull wide">If you wouldn’t leave it on the table at home or in a restaurant, don’t leave it here.</blockquote>
+  </div>
+</section>
+
+<section id="wardens">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow"><b>11</b>Who monitors this</span>
+      <h2>Accountability, drawn <em>plainly.</em></h2>
+      <p class="chain"><b>Hostel Administration</b> → <b>Hostel Wardens</b> → <b>Students</b></p>
+      <p>Monitoring and enforcement are carried out by Hostel Wardens under the Hostel Administration. Students are not monitors and are not expected to police or report on one another.</p>
+    </div>
+    <div class="grid g2 spaced">
+      <div class="cell"><h3>Hostel Wardens will</h3>
+        <ul>
+          <li>Monitor hostel cleanliness and dining etiquette</li>
+          <li>Address reported violations</li>
+          <li>Give reminders and warnings where appropriate</li>
+          <li>Coordinate with housekeeping</li>
+        </ul>
+      </div>
+      <div class="cell"><h3>And where required</h3>
+        <ul>
+          <li>Review relevant CCTV footage when authorised</li>
+          <li>Record repeated violations</li>
+          <li>Initiate penalties through the ERP system where applicable</li>
+          <li>Escalate persistent or serious violations per university procedures</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="report">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow"><b>12</b>Reporting</span>
+      <h2>See a cleanliness problem? <em>Report it.</em></h2>
+      <p class="lede">Reporting a facility issue helps housekeeping act faster. Use this for conditions, not for individuals.</p>
+    </div>
+    <div class="grid g3 spaced">
+      <div class="cell"><p>Overflowing bins</p></div>
+      <div class="cell"><p>Persistent food waste</p></div>
+      <div class="cell"><p>Damaged or missing bins</p></div>
+      <div class="cell"><p>Hygiene problems</p></div>
+      <div class="cell"><p>Areas needing immediate cleaning</p></div>
+      <div class="cell"><p>Other cleanliness concerns</p></div>
+    </div>
+    <div class="btns">
+      <!-- ponytail: placeholder href — connect to the university's reporting system -->
+      <a class="btn btn-solid" href="#report">Report a hostel cleanliness issue</a>
+    </div>
+    <div class="note"><p>Placeholder link — to be connected to the University’s official reporting system.</p></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap col">
+    <span class="eyebrow"><b>13</b>In closing</span>
+    <h2>Keep it clean. Keep it <em>respectful.</em></h2>
+    <p class="lede">Your hostel is a shared space. Your small action makes a difference.</p>
+  </div>
+  <div class="wrap"><p class="mnemo">LOOK<i>→</i>PICK<i>→</i>BIN</p></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h3>Hostel Administration</h3>
+        <p style="margin:0">KL University (KLEF)</p>
+        <p style="margin:.3em 0 0" class="muted">Green Fields, Vaddeswaram, Guntur District, Andhra Pradesh</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li class="ph">[Chief Warden — contact placeholder]</li>
+          <li class="ph">[Hostel office phone placeholder]</li>
+          <li class="ph">[Hostel office email placeholder]</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Policies &amp; links</h3>
+        <ul>
+          <li><a href="#" class="ph">[Hostel regulations — link placeholder]</a></li>
+          <li><a href="#" class="ph">[Student code of conduct — link placeholder]</a></li>
+          <li><a href="#" class="ph">[ERP portal — link placeholder]</a></li>
+          <li><a href="#report">Report a cleanliness issue</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbar"><p>An awareness and information initiative of the Hostel Administration. Penalties and procedures apply only as approved and notified under official Hostel and University regulations. Contact details, policy links and the reporting route are placeholders pending confirmation by the hostel office.</p></div>
+  </div>
+</footer>
+
+</body>
+</html>
